@@ -13,6 +13,10 @@
 		9EAC717A27BB685200A60AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716827BB685100A60AEE /* ContentView.swift */; };
 		9EAC717B27BB685200A60AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAC716927BB685200A60AEE /* Assets.xcassets */; };
 		9EAC717C27BB685200A60AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAC716927BB685200A60AEE /* Assets.xcassets */; };
+		9EAC718627BB6A7300A60AEE /* TarotAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC718527BB6A7300A60AEE /* TarotAssets.swift */; };
+		9EAC718727BB6A7300A60AEE /* TarotAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC718527BB6A7300A60AEE /* TarotAssets.swift */; };
+		9EAC718C27BB6ACC00A60AEE /* TarotAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAC718B27BB6ACC00A60AEE /* TarotAssets.xcassets */; };
+		9EAC718D27BB6ACC00A60AEE /* TarotAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAC718B27BB6ACC00A60AEE /* TarotAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		9EAC716E27BB685200A60AEE /* tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAC717427BB685200A60AEE /* tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAC717627BB685200A60AEE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		9EAC718527BB6A7300A60AEE /* TarotAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarotAssets.swift; sourceTree = "<group>"; };
+		9EAC718B27BB6ACC00A60AEE /* TarotAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TarotAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9EAC716727BB685100A60AEE /* tarotApp.swift */,
+				9EAC718E27BB6D3B00A60AEE /* TarotAssets */,
 				9EAC716827BB685100A60AEE /* ContentView.swift */,
 				9EAC716927BB685200A60AEE /* Assets.xcassets */,
 			);
@@ -76,6 +83,15 @@
 				9EAC717627BB685200A60AEE /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		9EAC718E27BB6D3B00A60AEE /* TarotAssets */ = {
+			isa = PBXGroup;
+			children = (
+				9EAC718527BB6A7300A60AEE /* TarotAssets.swift */,
+				9EAC718B27BB6ACC00A60AEE /* TarotAssets.xcassets */,
+			);
+			path = TarotAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAC717B27BB685200A60AEE /* Assets.xcassets in Resources */,
+				9EAC718C27BB6ACC00A60AEE /* TarotAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAC717C27BB685200A60AEE /* Assets.xcassets in Resources */,
+				9EAC718D27BB6ACC00A60AEE /* TarotAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +196,7 @@
 			files = (
 				9EAC717927BB685200A60AEE /* ContentView.swift in Sources */,
 				9EAC717727BB685200A60AEE /* tarotApp.swift in Sources */,
+				9EAC718627BB6A7300A60AEE /* TarotAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +206,7 @@
 			files = (
 				9EAC717A27BB685200A60AEE /* ContentView.swift in Sources */,
 				9EAC717827BB685200A60AEE /* tarotApp.swift in Sources */,
+				9EAC718727BB6A7300A60AEE /* TarotAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
