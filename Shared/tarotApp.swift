@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TarotApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardBoardView(viewModel: .init(tarots: Tarot.allCases))
         }
     }
+    
 }

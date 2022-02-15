@@ -1,11 +1,11 @@
 //
-//  TarotAssets.swift
+//  Tarot.swift
 //  tarot-ar
 //
 //  Created by Issarapong Poesua on 22/10/21.
 //
 
-enum TarotAssets: String, CaseIterable {
+enum Tarot: String, CaseIterable {
     
     case theFool            = "00-TheFool"
     case theMagician        = "01-TheMagician"
