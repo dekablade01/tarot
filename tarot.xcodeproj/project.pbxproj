@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EAC717727BB685200A60AEE /* tarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716727BB685100A60AEE /* tarotApp.swift */; };
-		9EAC717827BB685200A60AEE /* tarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716727BB685100A60AEE /* tarotApp.swift */; };
+		9EAC717727BB685200A60AEE /* TarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716727BB685100A60AEE /* TarotApp.swift */; };
+		9EAC717827BB685200A60AEE /* TarotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716727BB685100A60AEE /* TarotApp.swift */; };
 		9EAC717927BB685200A60AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716827BB685100A60AEE /* ContentView.swift */; };
 		9EAC717A27BB685200A60AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAC716827BB685100A60AEE /* ContentView.swift */; };
 		9EAC717B27BB685200A60AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAC716927BB685200A60AEE /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9EAC716727BB685100A60AEE /* tarotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tarotApp.swift; sourceTree = "<group>"; };
+		9EAC716727BB685100A60AEE /* TarotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotApp.swift; sourceTree = "<group>"; };
 		9EAC716827BB685100A60AEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EAC716927BB685200A60AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EAC716E27BB685200A60AEE /* tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +60,8 @@
 		9EAC716627BB685100A60AEE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9EAC716727BB685100A60AEE /* tarotApp.swift */,
 				9EAC718E27BB6D3B00A60AEE /* TarotAssets */,
+				9EAC716727BB685100A60AEE /* TarotApp.swift */,
 				9EAC716827BB685100A60AEE /* ContentView.swift */,
 				9EAC716927BB685200A60AEE /* Assets.xcassets */,
 			);
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAC717927BB685200A60AEE /* ContentView.swift in Sources */,
-				9EAC717727BB685200A60AEE /* tarotApp.swift in Sources */,
+				9EAC717727BB685200A60AEE /* TarotApp.swift in Sources */,
 				9EAC718627BB6A7300A60AEE /* TarotAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAC717A27BB685200A60AEE /* ContentView.swift in Sources */,
-				9EAC717827BB685200A60AEE /* tarotApp.swift in Sources */,
+				9EAC717827BB685200A60AEE /* TarotApp.swift in Sources */,
 				9EAC718727BB6A7300A60AEE /* TarotAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +336,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -365,7 +365,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
