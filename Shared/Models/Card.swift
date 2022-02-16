@@ -5,12 +5,19 @@
 //  Created by Issarapong Poesua on 15/2/22.
 //
 
-import Foundation
+import UIKit
 
-struct Card {
+struct Card: Hashable {
     
     enum Direction {
         case headUp, headDown
+        
+        var radians: CGFloat {
+            switch self {
+            case .headUp:       return 0
+            case .headDown:     return .pi
+            }
+        }
     }
     
     let direction: Direction

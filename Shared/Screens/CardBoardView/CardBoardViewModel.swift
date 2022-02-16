@@ -5,30 +5,39 @@
 //  Created by Issarapong Poesua on 15/2/22.
 //
 
-import Foundation
+import SwiftUI
 
 extension CardBoardView {
     
     @MainActor class ViewModel: ObservableObject {
         
         private var deckOfCards: [Tarot] = []
-        private var interactableDeckOfCards: [Card] = []
-        private var openedCards: [Card] = []
         
+        @Published private(set) var openedCardsWithLocations: [(card: Card, location: CGSize)] = []
+
+        private(set) var interactableDeckOfCards: [Card] = []
+
         init(tarots: [Tarot]) {
-            self.deckOfCards = tarots
+            deckOfCards = tarots
+            reset()
         }
         
         func pickCard() -> Card {
-            let card = interactableDeckOfCards.removeFirst()
-            openedCards.append(card)
-            return card
+            return interactableDeckOfCards.removeFirst()
+        }
+        
+        
+        func updateLocation(of card: Card, location: CGSize) {
+            _ = openedCardsWithLocations
+                .firstIndex { $0.card == card }
+                .map { openedCardsWithLocations.remove(at: $0) }
+            return openedCardsWithLocations.append((card: card, location: location))
         }
         
         func reset() {
             interactableDeckOfCards = deckOfCards
-                .map { Card(tarot: $0, direction: [.headUp, .headDown].randomElement()!) }
                 .shuffled()
+                .map { Card(tarot: $0, direction: [.headUp, .headDown].randomElement()!) }
         }
     }
 }

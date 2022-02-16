@@ -89,5 +89,8 @@ enum Tarot: String, CaseIterable {
     case wans12             = "Wands12"
     case wans13             = "Wands13"
     case wans14             = "Wands14"
-
+    
+    static let back = "CardBacks"
+    
+    static let sizeRatio = 300.0/527.0
 }
