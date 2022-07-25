@@ -20,7 +20,9 @@ extension CGPoint {
 struct CardBoardView: View {
     
     @ObservedObject private var viewModel: ViewModel
-    @State private var onDragLocation: CGPoint = CGPoint(x: 0.0, y: 0.0)
+    @State private var onDragLocationForUnopened: CGPoint = .zero
+    @State private var onDragLocationForOpened: CGPoint = .zero
+    @State private var draggingItem: Card?
     
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
@@ -40,50 +42,46 @@ struct CardBoardView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: cardWidth, height: cardWidth / Tarot.sizeRatio)
-                        .offset(onDragLocation.size)
+                        .offset(onDragLocationForUnopened.size)
                         .gesture(
                             DragGesture()
                                 .onChanged { value in
-                                    print(value)
-                                    withAnimation(.easeInOut) { onDragLocation = value.location }
+                                    withAnimation(.easeInOut) {
+                                        onDragLocationForUnopened = value.location
+                                    }
                                 }
                                 .onEnded { value in
-                                    onDragLocation = .zero
-                                    viewModel.updateLocation(of: viewModel.pickCard(), location: value.location)
+                                    onDragLocationForUnopened = .zero
+                                    viewModel.updateLocation(of: viewModel.pickCard(), location: value.location.size)
                                 }
                         )
-                    
-                    
                     ForEach(viewModel.openedCardsWithLocations, id: \.card.tarot.rawValue) { item in
                         Image(item.card.tarot.rawValue)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .rotationEffect(.radians(item.card.direction.radians))
                             .frame(width: cardWidth, height: cardWidth / Tarot.sizeRatio)
-                            .offset(item.location)
+                            .offset(draggingItem == item.card ? onDragLocationForOpened.size : item.location)
                             .gesture(
                             DragGesture()
                                 .onChanged { value in
-                                    
+                                    draggingItem = item.card
+                                    onDragLocationForOpened = value.location
                                 }
-                                .onEnded {
+                                .onEnded { value in
+                                    onDragLocationForOpened = .zero
+                                    viewModel.updateLocation(of: item.card, location: value.location.size)
+                                    draggingItem = nil
                                     
                                 }
                             )
                     }
                 }
                 .offset(CGSize(width: geometry.size.width - (cardWidth + 20), height: geometry.size.height - (cardWidth / Tarot.sizeRatio)))
-
-
             }
-            
-
         }
         .preferredColorScheme(.dark)
-
     }
-    
-    
     
 }
 struct CardBoardView_Preview: PreviewProvider {

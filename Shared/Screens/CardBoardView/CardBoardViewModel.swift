@@ -26,7 +26,6 @@ extension CardBoardView {
             return interactableDeckOfCards.removeFirst()
         }
         
-        
         func updateLocation(of card: Card, location: CGSize) {
             _ = openedCardsWithLocations
                 .firstIndex { $0.card == card }
