@@ -55,6 +55,9 @@ struct CardBoardView: View {
                                     viewModel.updateLocation(of: viewModel.pickCard(), location: value.location.size)
                                 }
                         )
+                        .onTapGesture(count: 2) {
+                            viewModel.reset()
+                        }
                     ForEach(viewModel.openedCardsWithLocations, id: \.card.tarot.rawValue) { item in
                         Image(item.card.tarot.rawValue)
                             .resizable()

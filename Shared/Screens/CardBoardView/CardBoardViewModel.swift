@@ -37,6 +37,8 @@ extension CardBoardView {
             interactableDeckOfCards = deckOfCards
                 .shuffled()
                 .map { Card(tarot: $0, direction: [.headUp, .headDown].randomElement()!) }
+            openedCardsWithLocations.removeAll()
+
         }
     }
 }
