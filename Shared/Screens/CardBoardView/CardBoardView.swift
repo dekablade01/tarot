@@ -56,7 +56,7 @@ struct CardBoardView: View {
                                 }
                         )
                         .onTapGesture(count: 2) {
-                            viewModel.reset()
+                            withAnimation { viewModel.reset() }
                         }
                     ForEach(viewModel.openedCardsWithLocations, id: \.card.tarot.rawValue) { item in
                         Image(item.card.tarot.rawValue)
